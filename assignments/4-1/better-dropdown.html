@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Dropdown Menu</title>
+  <!-- <link rel="stylesheet" href="styles/base.css"> -->
+  <style>
+    body {
+      /* reset */
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: #333;
+      padding: 10px;
+    }
+
+    nav button {
+      /* allows rotate to work */
+      display: flex;
+      background-color: #444;
+      color: #1408c2;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    span {
+      padding: 0 5px;
+    }
+
+    .rotate {
+      transform: rotate(90deg);
+      transition: transform 0.5s ease;
+    }
+
+    nav button:hover {
+      background-color: #555;
+    }
+
+    .dropdown {
+      display: none;
+      background: #555;
+    }
+
+    .dropdown.show {
+      display: block;
+    }
+
+    .dropdown a {
+      color: #1408c2;
+      padding: 10px;
+      /* make the links stack */
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <!-- https://www.w3schools.com/charsets/ref_utf_geometric.asp -->
+    <button onclick="toggleMenu()">Menu <span>➤</span></button>
+    <div class="dropdown" id="menu">
+      <!-- your home would be index.html, mine isn't because it is an example -->
+      <a href="dropdown-menu.html">Home</a>
+      <a href="pages/contactus.html">Contact Us</a>
+      <a href="pages/gophers.html">Gophers</a>
+      <a href="pages/wombats.html">Wombats</a>
+      <a href="pages/squirrels.html">Squirrels</a>
+    </div>
+  </nav>
+
+  <h1>Mobile Dropdown Menu</h1>
+  <!-- 
+    Scripts are often in the <head> </head> or just before the closing body tag.
+    Putting at the bottom helps ensure that the script runs after the DOM (think "page") is loaded. 
+  -->
+
+  <script>
+    function toggleMenu() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+      // https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle
+      document.getElementById("menu").classList.toggle("show");
+      document.getElementsByTagName("span")[0].classList.toggle("rotate");
+    }
+  </script>
+</body>
+
+</html>
