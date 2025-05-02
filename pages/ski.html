@@ -3,62 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ski</title>
+  <title>Ski</title>
+  <link rel="stylesheet" href="../styles/pages.css">
   <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px 0;
     }
 
-    body {
-        background-color: black;
-        color: white;
-        font-family: serif;
-        text-align: center;
+    .image-row img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
     }
 
-    h1 {
-        margin: 20px 0;
-        font-size: 3rem;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 40px;
-    }
-
-    .box {
-        background-color: white;
-        color: black;
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        font-weight: bold;
+    .button {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      color: #4da6ff;
+      text-decoration: none;
     }
 
     .footer {
-        margin-top: 100px;
-        text-align: left;
-        padding: 20px;
+      text-align: center;
+      margin-top: 60px;
+      color: white;
+      font-size: 0.9rem;
     }
-</style>
+  </style>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html">Home</a>
-      <a href="ski.html">ski</a>
-      <a href="bike.html">bike</a>
-      <a href="climb.html">climb</a>
-      <a href="hike.html">hike</a>
+      <a href="ski.html">Ski</a>
+      <a href="bike.html">Bike</a>
+      <a href="climb.html">Climb</a>
+      <a href="hike.html">Hike</a>
     </nav>
   </header>
-  <h1>ski</h1>
+
+  <h1>Ski</h1>
+
+  <div class="content">
+    <p>There’s nothing quite like carving down a fresh run with a bluebird sky overhead. Skiing is my go-to for chasing adrenaline and soaking in mountain views. Whether it’s powder days with friends or early solo laps, there’s always something about it that makes me feel alive.</p>
+  </div>
+
+  <div class="image-row">
+    <img src="../assets/images/skifour-small.jpg" alt="Skiing in the mountains">
+    <img src="../assets/images/skithree.jpeg" alt="Skiing in the mountains">
+    <img src="../assets/images/skitwo.jpeg" alt="Skiing in the mountains">
+  </div>
+  <menu>
+    <li>Mt. Rainer National Park </li>
+    <li>Bridger Bowl</li>
+    <li>Brider Range</li>
+  </menu>
+  <a class="button" href="../index.html">Back to Home</a>
+
+  <footer>
+    © 2025 Jacob Britt | Adventure Portfolio
+  </footer>
 </body>
 </html>
